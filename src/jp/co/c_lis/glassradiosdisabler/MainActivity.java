@@ -22,9 +22,9 @@ public class MainActivity extends Activity {
                     Settings.System.AIRPLANE_MODE_ON) == 1;
             Log.d(TAG, "airplaneMode = " + airplaneMode);
             if (airplaneMode) {
-                Toast.makeText(this, "All radios are turned OFF now.", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "All radios have been turned ON.", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "All radios are turned ON now.", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "All radios have been turned OFF.", Toast.LENGTH_LONG).show();
             }
             Settings.System.putInt(getContentResolver(), Settings.System.AIRPLANE_MODE_ON,
                     airplaneMode ? 0 : 1);

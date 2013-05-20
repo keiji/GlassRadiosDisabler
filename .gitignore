@@ -1,0 +1,5 @@
+.project
+.classpath
+R.java
+bin/*
+gen/*

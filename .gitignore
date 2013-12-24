@@ -1,5 +1,2 @@
-.project
-.classpath
-R.java
-bin/*
-gen/*
+.gradle
+.idea

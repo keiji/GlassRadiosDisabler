@@ -13,8 +13,8 @@ repositories {
 }
 
 android {
-    compileSdkVersion 15
-    buildToolsVersion "19.0.1"
+    compileSdkVersion "Google Inc.:Glass Development Kit Sneak Peek:15"
+    buildToolsVersion "17"
 
     defaultConfig {
         minSdkVersion 15

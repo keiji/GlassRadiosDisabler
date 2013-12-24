@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">GlassRadiosDisabler</string>
+
+    <string name="would_you_like_to_turn_radios_on">Would you like to turn all radios on?</string>
+
+    <string name="glass_voice_trigger_radios">Toggle radios</string>
+
+    <string name="all_radios_turned_off">All radios turned off.</string>
+
+    <string name="all_radios_turned_off_with_pattern">All radios turned off with pattern lock.</string>
+
+    <string name="all_radios_turned_on">All radios turned on.</string>
+
+    <string name="tap_to_turn_radios_off">Tap to turn all radios off.</string>
+
+    <string name="long_tap_to_turn_radios_on">Long tap to turn all radios on.</string>
+
+    <string name="long_tap_to_turn_radios_off_with_pattern">Long tap to turn radios off with pattern lock.</string>
+
+    <string name="long_tap_to_turn_radios_on_with_pattern">Long tap to turn radios off with pattern lock.</string>
+
+    <string name="long_tap_to_enter_pattern">Long tap to enter pattern.</string>
+
+    <string name="pattern_does_not_match">Pattern doesn\'t match.</string>
+
+    <string name="long_tap_to_reenter_pattern">Long tap to re-enter pattern.</string>
+
+    <string name="draw_your_pattern">Draw your pattern. Long tap to finish.</string>
+
+
 </resources>

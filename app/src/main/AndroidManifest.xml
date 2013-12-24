@@ -5,30 +5,33 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="14" />
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
 
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-
-    <uses-library
-        android:name="com.google.android.glass"
-        android:required="true" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        android:theme="@style/CustomTheme" >
         <activity
-            android:name="jp.co.c_lis.glassradiosdisabler.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            android:name=".ui.AirplaneModeActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
             </intent-filter>
-        </activity>
+            <meta-data android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/voice_trigger_radios" />
+         </activity>
+        <activity
+            android:name=".ui.PatternActivity" />
+        <activity
+            android:name=".ui.MessageActivity" />
+
+        <uses-library
+            android:name="com.google.android.glass"
+            android:required="true" />
+
     </application>
 
 </manifest>

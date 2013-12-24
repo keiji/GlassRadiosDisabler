@@ -39,7 +39,7 @@ public class AirplaneModeActivity extends Activity {
             public boolean onGesture(Gesture gesture) {
                 if (gesture == Gesture.TAP) {
                     Configuration.setAirplaneMode(AirplaneModeActivity.this, true);
-                    mSetting.setPassphrese(null);
+                    mSetting.clearPattern();
                     finishOnMessage(R.string.all_radios_turned_off);
                     return true;
                 } else if (gesture == Gesture.LONG_PRESS) {
@@ -53,7 +53,7 @@ public class AirplaneModeActivity extends Activity {
         if (Configuration.getAirplaneModeState(this)) {
             card.setText(R.string.would_you_like_to_turn_radios_on);
 
-            if (mSetting.getPattern() != null) {
+            if (mSetting.hasPattern()) {
                 card.setFootnote(R.string.long_tap_to_enter_pattern);
                 mGestureDetector.setBaseListener(new GestureDetector.BaseListener() {
                     @Override
@@ -95,7 +95,7 @@ public class AirplaneModeActivity extends Activity {
         if (resultCode == RESULT_OK) {
             String pattern = data != null ? data.getStringExtra(PatternActivity.KEY_PATTERN) : null;
             if (requestCode == REQUEST_LOCK) {
-                mSetting.setPassphrese(pattern);
+                mSetting.setPattern(pattern);
                 Configuration.setAirplaneMode(this, true);
                 finishOnMessage(R.string.all_radios_turned_off_with_pattern);
             } else if (requestCode == REQUEST_UNLOCK) {

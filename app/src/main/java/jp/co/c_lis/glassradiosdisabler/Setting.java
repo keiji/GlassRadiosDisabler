@@ -8,14 +8,22 @@ public class Setting {
     private SharedPreferences mPref = null;
 
     private static final String PREF_FILE_NAME = "pref.dat";
-    private static final String PREF_KEY_PASSPHRESE = "key_passphrese";
+    private static final String PREF_KEY_PATTERN = "key_pattern";
 
-    public String getPattern() {
-        return mPref.getString(PREF_KEY_PASSPHRESE, null);
+    public boolean hasPattern() {
+        return mPref.getString(PREF_KEY_PATTERN, null) != null;
     }
 
-    public void setPassphrese(String phrese) {
-        mPref.edit().putString(PREF_KEY_PASSPHRESE, phrese).commit();
+    public String getPattern() {
+        return mPref.getString(PREF_KEY_PATTERN, null);
+    }
+
+    public void setPattern(String pattern) {
+        mPref.edit().putString(PREF_KEY_PATTERN, pattern).commit();
+    }
+
+    public void clearPattern() {
+        setPattern(null);
     }
 
     private static Setting sInstance = null;
